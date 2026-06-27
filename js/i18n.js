@@ -449,6 +449,14 @@
   "mentor.quick.faq": "ప్రశ్నలు"
 });
 
+
+  Object.assign(TEXT.en, {
+  "mentor.lang.label": "Choose Language"
+});
+  Object.assign(TEXT.te, {
+  "mentor.lang.label": "భాష ఎంచుకోండి"
+});
+
 function applyLanguage(lang) {
     const selected = TEXT[lang] ? lang : "te";
     document.documentElement.lang = selected;

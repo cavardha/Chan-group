@@ -176,3 +176,13 @@ COMPLETE FINAL POLISH
 - Added sticky quick navigation on mentorship page: Enroll, Roadmap, Benefits, FAQ.
 - Added smoother card hover polish and improved mobile spacing.
 - This ZIP contains the complete website code ready to edit in VS Code.
+
+
+PREMIUM MOBILE BUGFIX
+=====================
+- Fixed 1 to 1 Property Advisor popup using event delegation.
+- Paid advisor contact card now opens the popup instead of going randomly/directly.
+- Popup is hidden by default with inline + CSS failsafe.
+- Mentorship mobile header redesigned with clear language bar.
+- Mentorship hero card redesigned as a clean premium card.
+- Mentorship mobile layout improved and reduced clutter.

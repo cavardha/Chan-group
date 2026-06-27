@@ -268,40 +268,60 @@ document.querySelectorAll('form[name="property-enquiry"]').forEach((form) => {
 
 // 1 to 1 Property Advisor popup + WhatsApp lead capture
 const advisorModal = document.getElementById('advisorModal');
-const openAdvisorButtons = document.querySelectorAll('[data-open-advisor]');
-const closeAdvisorButtons = document.querySelectorAll('[data-close-advisor]');
+const advisorForm = document.getElementById('advisorForm');
 
-function openAdvisorModal() {
+function openAdvisorModal(event) {
+  if (event) event.preventDefault();
   if (!advisorModal) return;
-  advisorModal.classList.add('open');
-  advisorModal.setAttribute('aria-hidden', 'false');
-  document.body.classList.add('modal-open');
+
+  advisorModal.style.display = 'flex';
+  requestAnimationFrame(() => {
+    advisorModal.classList.add('open');
+    advisorModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+  });
+
+  const firstInput = advisorModal.querySelector('input, select, textarea, button');
+  if (firstInput) {
+    setTimeout(() => firstInput.focus({ preventScroll: true }), 120);
+  }
 }
 
 function closeAdvisorModal() {
   if (!advisorModal) return;
+
   advisorModal.classList.remove('open');
   advisorModal.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('modal-open');
+
+  setTimeout(() => {
+    if (!advisorModal.classList.contains('open')) {
+      advisorModal.style.display = 'none';
+    }
+  }, 180);
 }
 
-openAdvisorButtons.forEach((btn) => {
-  btn.addEventListener('click', openAdvisorModal);
-  btn.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      openAdvisorModal();
-    }
-  });
-});
+document.addEventListener('click', (event) => {
+  const openBtn = event.target.closest('[data-open-advisor]');
+  if (openBtn) {
+    openAdvisorModal(event);
+    return;
+  }
 
-closeAdvisorButtons.forEach((btn) => btn.addEventListener('click', closeAdvisorModal));
+  const closeBtn = event.target.closest('[data-close-advisor]');
+  if (closeBtn) {
+    event.preventDefault();
+    closeAdvisorModal();
+  }
+});
 
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') closeAdvisorModal();
+  if (event.key === 'Escape') {
+    closeAdvisorModal();
+    if (typeof closeEnrollThankModal === 'function') closeEnrollThankModal();
+  }
 });
 
-const advisorForm = document.getElementById('advisorForm');
 if (advisorForm) {
   advisorForm.addEventListener('submit', (event) => {
     event.preventDefault();

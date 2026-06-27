@@ -197,7 +197,7 @@
           <article class="service-card reveal"><i class="fa-solid fa-handshake"></i><h3 data-i18n="services.buysell.title">Buy / Sell / Invest</h3><p data-i18n="services.buysell.text">Direct assistance for buyers, sellers and investors who need clear guidance.</p></article>
           <article class="service-card reveal"><i class="fa-solid fa-file-circle-check"></i><h3 data-i18n="services.details.title">Project Details</h3><p data-i18n="services.details.text">Available project information shared for better decision-making.</p></article>
           <article class="service-card reveal"><i class="fa-solid fa-car-side"></i><h3 data-i18n="services.sitevisit.title">Site Visit Support</h3><p data-i18n="services.sitevisit.text">Coordinate appointments and schedule visits for shortlisted properties.</p></article>
-          <article class="service-card reveal paid-advice advisor-service-card" data-open-advisor role="button" tabindex="0"><i class="fa-solid fa-user-tie"></i><h3 data-i18n="services.advisor.title">1 to 1 Property Advisor</h3><p data-i18n="services.advisor.text">Paid personal guidance on where to invest, how to invest, location shortlist, budget planning and decision support.</p><button type="button" class="mini-advisor-btn" data-i18n="services.advisor.cta">Book Advisor</button></article>
+          <article class="service-card reveal paid-advice advisor-service-card" data-open-advisor role="button" tabindex="0"><i class="fa-solid fa-user-tie"></i><h3 data-i18n="services.advisor.title">1 to 1 Property Advisor</h3><p data-i18n="services.advisor.text">Paid personal guidance on where to invest, how to invest, location shortlist, budget planning and decision support.</p><button type="button" class="mini-advisor-btn" data-open-advisor data-i18n="services.advisor.cta">Book Advisor</button></article>
         </div>
       </div>
     </section>
@@ -238,7 +238,7 @@
               <h3 data-i18n="about.advisor.title">1 to 1 Property Advisor</h3>
               <p data-i18n="about.advisor.text">Personal discussion for budget, location, investment strategy and next-step decision support.</p>
             </div>
-            <button type="button" data-i18n="about.advisor.cta">Quick Enquiry</button>
+            <button type="button" data-open-advisor data-i18n="about.advisor.cta">Quick Enquiry</button>
           </div>
           <div class="hero-actions about-cta-row"><a class="btn btn-gold" href="tel:+916302307242"><i class="fa-solid fa-phone"></i> <span data-i18n="about.call">Call 6302307242</span></a><a class="btn btn-whatsapp" href="https://wa.me/916302307242?text=Hello%20Chan%20Groups%2C%20I%20need%20property%20details." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> <span data-i18n="about.wa">WhatsApp Enquiry</span></a></div>
         </div>
@@ -311,10 +311,10 @@
             <span><small>WhatsApp Channel</small><b>Project Updates</b></span>
           </a>
 
-          <a class="contact-mini paid-contact" href="https://wa.me/916302307242?text=Hello%20Chan%20Groups%2C%20I%20want%20to%20know%20about%20paid%201%3A1%20property%20advice." target="_blank" rel="noopener">
+          <button class="contact-mini paid-contact advisor-popup-trigger" type="button" data-open-advisor>
             <i class="fa-solid fa-user-tie"></i>
-            <span><small>Paid Service</small><b>1:1 Property Advice</b></span>
-          </a>
+            <span><small data-i18n="about.advisor.kicker">Paid Advisory Service</small><b data-i18n="about.advisor.title">1 to 1 Property Advisor</b></span>
+          </button>
         </div>
 
         <div class="contact-note reveal">
@@ -326,7 +326,7 @@
   </main>
 
   
-  <div class="advisor-modal" id="advisorModal" aria-hidden="true">
+  <div class="advisor-modal" id="advisorModal" aria-hidden="true" style="display:none;">
     <div class="advisor-modal-backdrop" data-close-advisor></div>
     <div class="advisor-modal-card" role="dialog" aria-modal="true" aria-labelledby="advisorModalTitle">
       <button type="button" class="advisor-close" data-close-advisor aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
