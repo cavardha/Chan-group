@@ -265,3 +265,153 @@ document.querySelectorAll('form[name="property-enquiry"]').forEach((form) => {
     window.location.href = whatsappUrl;
   });
 });
+
+// 1 to 1 Property Advisor popup + WhatsApp lead capture
+const advisorModal = document.getElementById('advisorModal');
+const openAdvisorButtons = document.querySelectorAll('[data-open-advisor]');
+const closeAdvisorButtons = document.querySelectorAll('[data-close-advisor]');
+
+function openAdvisorModal() {
+  if (!advisorModal) return;
+  advisorModal.classList.add('open');
+  advisorModal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+}
+
+function closeAdvisorModal() {
+  if (!advisorModal) return;
+  advisorModal.classList.remove('open');
+  advisorModal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+}
+
+openAdvisorButtons.forEach((btn) => {
+  btn.addEventListener('click', openAdvisorModal);
+  btn.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openAdvisorModal();
+    }
+  });
+});
+
+closeAdvisorButtons.forEach((btn) => btn.addEventListener('click', closeAdvisorModal));
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeAdvisorModal();
+});
+
+const advisorForm = document.getElementById('advisorForm');
+if (advisorForm) {
+  advisorForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const fd = new FormData(advisorForm);
+    const message = [
+      'Hello Chan Groups, I want to enquire about 1 to 1 Property Advisor paid service.',
+      '',
+      `Name: ${fd.get('name') || '-'}`,
+      `Mobile: ${fd.get('mobile') || '-'}`,
+      `City: ${fd.get('city') || '-'}`,
+      `Budget: ${fd.get('budget') || '-'}`,
+      `Need: ${fd.get('need') || '-'}`,
+      '',
+      'Please contact me with advisor service details and charges.'
+    ].join('\n');
+
+    window.location.href = `https://wa.me/916302307242?text=${encodeURIComponent(message)}`;
+  });
+}
+
+// Mentorship enrollment form -> WhatsApp
+const mentorshipForm = document.getElementById('mentorshipForm');
+const enrollThankModal = document.getElementById('enrollThankModal');
+const thankWhatsAppLink = document.getElementById('thankWhatsAppLink');
+const thankYouVideo = document.getElementById('thankYouVideo');
+const videoPlaceholder = document.getElementById('videoPlaceholder');
+
+function openEnrollThankModal(whatsappUrl) {
+  if (!enrollThankModal) return;
+
+  if (thankWhatsAppLink) {
+    thankWhatsAppLink.href = whatsappUrl;
+  }
+
+  if (thankYouVideo) {
+    const src = thankYouVideo.dataset.videoSrc || '';
+    if (src && !src.includes('VIDEO_ID_HERE')) {
+      thankYouVideo.src = src;
+      thankYouVideo.style.display = 'block';
+      if (videoPlaceholder) videoPlaceholder.style.display = 'none';
+    } else {
+      thankYouVideo.removeAttribute('src');
+      thankYouVideo.style.display = 'none';
+      if (videoPlaceholder) videoPlaceholder.style.display = 'grid';
+    }
+  }
+
+  enrollThankModal.classList.add('open');
+  enrollThankModal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+}
+
+function closeEnrollThankModal() {
+  if (!enrollThankModal) return;
+  enrollThankModal.classList.remove('open');
+  enrollThankModal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+
+  if (thankYouVideo) {
+    thankYouVideo.removeAttribute('src');
+  }
+}
+
+document.querySelectorAll('[data-close-enroll-thank]').forEach((btn) => {
+  btn.addEventListener('click', closeEnrollThankModal);
+});
+
+if (mentorshipForm) {
+  mentorshipForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const fd = new FormData(mentorshipForm);
+    const message = [
+      'Hello Chan Groups, I want to enroll in the FREE Real Estate Professional 365 Days Mentorship Program.',
+      '',
+      `Name: ${fd.get('name') || '-'}`,
+      `Mobile: ${fd.get('mobile') || '-'}`,
+      `WhatsApp: ${fd.get('whatsapp') || '-'}`,
+      `Email: ${fd.get('email') || '-'}`,
+      `City: ${fd.get('city') || '-'}`,
+      `Occupation: ${fd.get('occupation') || '-'}`,
+      `Why I want to join: ${fd.get('why') || '-'}`,
+      '',
+      'Please reserve my seat for the 2-hour master class.'
+    ].join('\n');
+
+    const whatsappUrl = `https://wa.me/916302307242?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappUrl, '_blank', 'noopener');
+    openEnrollThankModal(whatsappUrl);
+  });
+}
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeEnrollThankModal();
+});
+
+// Tiny scroll-to-top button used on main website and mentorship page
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+if (scrollTopBtn) {
+  const toggleScrollTop = () => {
+    scrollTopBtn.classList.toggle('show', window.scrollY > 360);
+  };
+
+  window.addEventListener('scroll', toggleScrollTop, { passive: true });
+  toggleScrollTop();
+
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
