@@ -3,8 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore open plots, villa plots, open lands and property guidance across Hyderabad, Amaravati and Visakhapatnam with Chan Groups Real Estate.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chan Groups Real Estate | Hyderabad, Amaravati & Visakhapatnam">
+  <meta property="og:description" content="Explore open plots, villa plots, open lands and property guidance across Hyderabad, Amaravati and Visakhapatnam with Chan Groups Real Estate.">
+  <meta property="og:url" content="https://cavardha.github.io/chan-groups-real-estate/">
+  <meta property="og:image" content="assets/images/brand-banner.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Chan Groups Real Estate | Hyderabad, Amaravati & Visakhapatnam">
+  <meta name="twitter:description" content="Explore open plots, villa plots, open lands and property guidance across Hyderabad, Amaravati and Visakhapatnam with Chan Groups Real Estate.">
+  <meta name="twitter:image" content="assets/images/brand-banner.jpg">
   <title>Chan Groups Real Estate | Hyderabad, Amaravati & Visakhapatnam</title>
-  <meta name="description" content="Open plots, villa plots, open lands and property guidance across Hyderabad, Amaravati and Visakhapatnam.">
   <meta name="theme-color" content="#061b3a">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&family=Noto+Sans+Telugu:wght@400;500;600;700;800&family=Noto+Serif+Telugu:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="canonical" href="https://cavardha.github.io/chan-groups-real-estate/">
 </head>
 <body data-page="home">
   <div class="topbar">
@@ -100,8 +110,7 @@
             <span><b>100%</b> <em data-i18n="hero.stat3">Direct</em></span>
           </div>
 
-          <form class="enquiry-form" name="property-enquiry" method="POST" data-netlify="true" action="thank-you.html">
-            <input type="hidden" name="form-name" value="property-enquiry">
+          <form class="enquiry-form" name="property-enquiry" id="propertyEnquiryForm">
             <div class="form-title">
               <h2 data-i18n="hero.form.title">Quick Enquiry</h2>
               <p data-i18n="hero.form.text">Share your requirement. We will contact you shortly.</p>
@@ -166,8 +175,8 @@
         </div>
         <div class="city-carousel-shell reveal">
           <div class="city-carousel-top">
-            <span><i class="fa-solid fa-arrows-left-right"></i> <b data-i18n="cities.autoslide">Auto slide enabled on mobile</b></span>
-            <small data-i18n="cities.swipe">Swipe anytime</small>
+            <span><i class="fa-solid fa-arrows-left-right"></i> <b data-i18n="cities.autoslide">Our active service locations</b></span>
+            <small data-i18n="cities.swipe">Explore cities</small>
           </div>
           <div class="city-grid city-auto-track" id="cityTrack" data-auto-slider="true" aria-label="Service city carousel">
             <article class="city-card"><img src="assets/images/hyderabad.jpg" alt="Hyderabad"><div><span data-i18n="cities.hyderabad.state">Telangana</span><h3 data-i18n="cities.hyderabad.name">Hyderabad</h3><p data-i18n="cities.hyderabad.text">Urban expansion, residential plot demand and premium villa plot opportunities.</p></div></article>
@@ -207,7 +216,7 @@
         <div class="section-head reveal">
           <span class="eyebrow" data-i18n="properties.eyebrow">Featured Categories</span>
           <h2 data-i18n="properties.title">Highlighted Property Opportunities</h2>
-          <p data-i18n="properties.subtitle">Replace these sample cards with actual project names, prices, sizes and verified approval details.</p>
+          <p data-i18n="properties.subtitle">Explore selected property categories and connect on WhatsApp for current availability, sizes, prices and site visit details.</p>
         </div>
         <div class="property-grid">
           <article class="property-card reveal"><div class="property-media"><img src="assets/images/hyderabad.jpg" alt="Hyderabad villa plots"><span>Hyderabad</span></div><div class="property-body"><h3 data-i18n="properties.card1.title">Premium Villa Plot Opportunities</h3><p data-i18n="properties.card1.text">Residential developments and plotted opportunities around Hyderabad.</p><a href="https://wa.me/916302307242?text=I%20am%20interested%20in%20Hyderabad%20villa%20plots." target="_blank" rel="noopener" data-i18n="properties.enquiry">WhatsApp Enquiry</a></div></article>
@@ -248,24 +257,19 @@
     <section class="section gallery-section" id="gallery">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Project Gallery</span>
-          <h2>Project Photos & Updates</h2>
-          <p>Easy method: copy photos into <strong>assets/images/projects</strong> and rename them as <strong>project-01.jpg</strong>, <strong>project-02.jpg</strong>, <strong>project-03.jpg</strong>.</p>
+          <span class="eyebrow" data-i18n="gallery.eyebrow">Project Gallery</span>
+          <h2 data-i18n="gallery.title">Project Photos & Updates</h2>
+          <p data-i18n="gallery.subtitle">Explore recent project visuals, location highlights, brand updates and event announcements from Chan Groups Real Estate.</p>
         </div>
 
         <div class="gallery-toolbar reveal">
-          <button class="gallery-filter active" type="button" data-filter="All">All</button>
-          <button class="gallery-filter" type="button" data-filter="Project">Projects</button>
-          <button class="gallery-filter" type="button" data-filter="Brand">Brand</button>
-          <button class="gallery-filter" type="button" data-filter="Event">Events</button>
+          <button class="gallery-filter active" type="button" data-filter="All" data-i18n="gallery.filter.all">All</button>
+          <button class="gallery-filter" type="button" data-filter="Project" data-i18n="gallery.filter.projects">Projects</button>
+          <button class="gallery-filter" type="button" data-filter="Brand" data-i18n="gallery.filter.brand">Brand</button>
+          <button class="gallery-filter" type="button" data-filter="Event" data-i18n="gallery.filter.events">Events</button>
         </div>
 
         <div class="project-gallery-grid reveal" id="projectGallery"></div>
-
-        <div class="gallery-help reveal">
-          <i class="fa-solid fa-circle-info"></i>
-          <span>For new photos: copy files to <b>assets/images/projects</b> and rename them like <b>project-06.jpg</b>. No JS editing needed.</span>
-        </div>
       </div>
     </section>
 

@@ -209,7 +209,7 @@
   "hero.form.submit": "Send on WhatsApp",
   "properties.eyebrow": "Featured Categories",
   "properties.title": "Highlighted Property Opportunities",
-  "properties.subtitle": "Replace these sample cards with actual project names, prices, sizes and verified approval details.",
+  "properties.subtitle": "Explore selected property categories and connect on WhatsApp for current availability, sizes, prices and site visit details.",
   "properties.card1.title": "Premium Villa Plot Opportunities",
   "properties.card1.text": "Residential developments and plotted opportunities around Hyderabad.",
   "properties.card2.title": "Open Lands & Investment Options",
@@ -306,7 +306,7 @@
   "hero.form.submit": "WhatsApp లో పంపండి",
   "properties.eyebrow": "ఫీచర్డ్ కేటగిరీలు",
   "properties.title": "ప్రత్యేక ప్రాపర్టీ అవకాశాలు",
-  "properties.subtitle": "ఇక్కడ ఉన్నవి నమూనా కార్డులు. నిజమైన ప్రాజెక్ట్ పేరు, ధరలు, సైజులు మరియు అప్రూవల్ వివరాలతో మార్చండి.",
+  "properties.subtitle": "ప్రస్తుత లభ్యత, సైజులు, ధరలు మరియు సైట్ విజిట్ వివరాల కోసం WhatsApp ద్వారా సంప్రదించండి.",
   "properties.card1.title": "ప్రీమియం విల్లా ప్లాట్ అవకాశాలు",
   "properties.card1.text": "హైదరాబాద్ చుట్టుపక్కల రెసిడెన్షియల్ డెవలప్‌మెంట్స్ మరియు ప్లాటెడ్ అవకాశాలు.",
   "properties.card2.title": "ఓపెన్ ల్యాండ్స్ & పెట్టుబడి ఎంపికలు",
@@ -455,6 +455,30 @@
 });
   Object.assign(TEXT.te, {
   "mentor.lang.label": "భాష ఎంచుకోండి"
+});
+
+
+  Object.assign(TEXT.en, {
+  "gallery.eyebrow": "Project Gallery",
+  "gallery.title": "Project Photos & Updates",
+  "gallery.subtitle": "Explore recent project visuals, location highlights, brand updates and event announcements from Chan Groups Real Estate.",
+  "gallery.filter.all": "All",
+  "gallery.filter.projects": "Projects",
+  "gallery.filter.brand": "Brand",
+  "gallery.filter.events": "Events",
+  "cities.autoslide": "Our active service locations",
+  "cities.swipe": "Explore cities"
+});
+  Object.assign(TEXT.te, {
+  "gallery.eyebrow": "ప్రాజెక్ట్ గ్యాలరీ",
+  "gallery.title": "ప్రాజెక్ట్ ఫోటోలు & అప్‌డేట్స్",
+  "gallery.subtitle": "Chan Groups Real Estate నుంచి తాజా ప్రాజెక్ట్ విజువల్స్, లొకేషన్ హైలైట్స్, బ్రాండ్ అప్‌డేట్స్ మరియు ఈవెంట్ వివరాలు చూడండి.",
+  "gallery.filter.all": "అన్నీ",
+  "gallery.filter.projects": "ప్రాజెక్ట్స్",
+  "gallery.filter.brand": "బ్రాండ్",
+  "gallery.filter.events": "ఈవెంట్స్",
+  "cities.autoslide": "మా సేవల ప్రధాన ప్రాంతాలు",
+  "cities.swipe": "నగరాలు చూడండి"
 });
 
 function applyLanguage(lang) {

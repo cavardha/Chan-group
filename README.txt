@@ -158,9 +158,9 @@ MOBILE HEADER + CITY LANGUAGE + ENROLL THANK YOU UPDATE
 HOW TO ADD YOUTUBE VIDEO IN THANK YOU POPUP
 ===========================================
 Open mentorship.html and search:
-VIDEO_ID_HERE
+data-video-src=""
 
-Replace VIDEO_ID_HERE with the actual YouTube video ID.
+Paste the full YouTube embed URL inside the quotes.
 
 Example:
 If YouTube link is:
@@ -186,3 +186,21 @@ PREMIUM MOBILE BUGFIX
 - Mentorship mobile header redesigned with clear language bar.
 - Mentorship hero card redesigned as a clean premium card.
 - Mentorship mobile layout improved and reduced clutter.
+
+
+FINAL LAUNCH REVIEW PATCH
+=========================
+- Removed Netlify form attributes because the site is hosted on GitHub Pages.
+- Quick Enquiry now relies on WhatsApp submit only.
+- Removed visible placeholder text from the property section.
+- Added Open Graph / Twitter preview tags to improve WhatsApp sharing previews.
+- Added noindex robots meta tag to thank-you.html.
+- YouTube thank-you video now uses an empty data-video-src until a real client video is provided, so no broken embed is loaded.
+
+
+FINAL GALLERY CLEANUP
+=====================
+- Removed public-facing admin instructions from the Project Gallery section.
+- Gallery section now uses client-facing copy.
+- Gallery heading/subtitle/filter buttons now support Telugu/English translation.
+- City carousel helper text changed to client-facing wording.

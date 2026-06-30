@@ -359,7 +359,7 @@ function openEnrollThankModal(whatsappUrl) {
 
   if (thankYouVideo) {
     const src = thankYouVideo.dataset.videoSrc || '';
-    if (src && !src.includes('VIDEO_ID_HERE')) {
+    if (src && src.startsWith('https://www.youtube.com/embed/')) {
       thankYouVideo.src = src;
       thankYouVideo.style.display = 'block';
       if (videoPlaceholder) videoPlaceholder.style.display = 'none';
@@ -435,3 +435,28 @@ if (scrollTopBtn) {
   });
 }
 
+
+
+// Final GitHub Pages-safe quick enquiry fallback.
+// The form does not submit to a backend. It opens WhatsApp with the visitor details.
+const propertyEnquiryForm = document.getElementById('propertyEnquiryForm');
+if (propertyEnquiryForm && !propertyEnquiryForm.dataset.whatsappBound) {
+  propertyEnquiryForm.dataset.whatsappBound = 'true';
+  propertyEnquiryForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const fd = new FormData(propertyEnquiryForm);
+    const message = [
+      'Hello Chan Groups, I visited your website and want property details.',
+      '',
+      `Name: ${fd.get('name') || '-'}`,
+      `Mobile: ${fd.get('mobile') || '-'}`,
+      `Property Type: ${fd.get('property-type') || '-'}`,
+      `Preferred City: ${fd.get('city') || '-'}`,
+      '',
+      'Please contact me with current availability and site visit details.'
+    ].join('\n');
+
+    window.location.href = `https://wa.me/916302307242?text=${encodeURIComponent(message)}`;
+  });
+}

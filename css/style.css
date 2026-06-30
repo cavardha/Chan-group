@@ -3651,3 +3651,39 @@ body.lang-te .city-card p {
     border-radius: 12px;
   }
 }
+
+
+/* FINAL CLIENT-READY PATCHES */
+.property-grid .property-card a,
+.property-body a {
+  font-weight: 900;
+}
+
+/* Avoid accidental native form UI issues on GitHub Pages */
+.enquiry-form {
+  position: relative;
+}
+
+/* Gallery images have actual files; empty-state appears only if files are missing */
+.gallery-empty {
+  border-style: dashed;
+}
+
+/* Thank popup placeholder should look deliberate if no YouTube link is added */
+.video-placeholder span {
+  line-height: 1.35;
+}
+
+
+/* FINAL GALLERY CLEANUP */
+.gallery-section .section-head p {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+body.lang-te .gallery-section .section-head h2 {
+  font-family: "Noto Serif Telugu", "Noto Sans Telugu", serif;
+}
+body.lang-te .gallery-filter {
+  font-family: "Noto Sans Telugu", sans-serif;
+}
