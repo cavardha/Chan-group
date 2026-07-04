@@ -359,7 +359,7 @@ function openEnrollThankModal(whatsappUrl) {
 
   if (thankYouVideo) {
     const src = thankYouVideo.dataset.videoSrc || '';
-    if (src && src.startsWith('https://www.youtube.com/embed/')) {
+    if (src && (src.startsWith('https://www.youtube.com/embed/') || src.startsWith('https://www.instagram.com/'))) {
       thankYouVideo.src = src;
       thankYouVideo.style.display = 'block';
       if (videoPlaceholder) videoPlaceholder.style.display = 'none';

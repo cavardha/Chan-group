@@ -3687,3 +3687,12 @@ body.lang-te .gallery-section .section-head h2 {
 body.lang-te .gallery-filter {
   font-family: "Noto Sans Telugu", sans-serif;
 }
+
+
+/* FINAL INSTAGRAM REEL UPDATE */
+.video-placeholder i.fa-instagram {
+  color: #c13584;
+}
+.thank-video-box iframe {
+  background: #fff;
+}

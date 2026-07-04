@@ -204,3 +204,13 @@ FINAL GALLERY CLEANUP
 - Gallery section now uses client-facing copy.
 - Gallery heading/subtitle/filter buttons now support Telugu/English translation.
 - City carousel helper text changed to client-facing wording.
+
+
+INSTAGRAM REEL THANK-YOU UPDATE
+===============================
+- Mentorship enrollment thank-you popup now uses this Instagram Reel:
+  https://www.instagram.com/reel/DaSw2_byFE_/?igsh=MXZuanZ3YnVyeWJkNw==
+- Embed URL used:
+  https://www.instagram.com/reel/DaSw2_byFE_/embed
+- Facebook display name updated to:
+  Chan Rama Groups

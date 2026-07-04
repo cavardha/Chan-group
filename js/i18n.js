@@ -399,8 +399,8 @@
   "mentor.thank.kicker": "Enrollment Submitted",
   "mentor.thank.title": "Thank you for enrolling!",
   "mentor.thank.text": "Your enrollment request is ready. Please complete the WhatsApp message so our team can contact you.",
-  "mentor.thank.videoTitle": "Thank You Video",
-  "mentor.thank.videoNote": "Add your YouTube video ID in mentorship.html to play the client video here.",
+  "mentor.thank.videoTitle": "Thank You Reel",
+  "mentor.thank.videoNote": "Watch the client message after enrollment.",
   "mentor.thank.whatsapp": "Complete on WhatsApp",
   "mentor.thank.home": "Go to Main Site"
 });
@@ -423,8 +423,8 @@
   "mentor.thank.kicker": "నమోదు పంపబడింది",
   "mentor.thank.title": "నమోదు చేసినందుకు ధన్యవాదాలు!",
   "mentor.thank.text": "మీ ఎన్రోల్మెంట్ రిక్వెస్ట్ సిద్ధంగా ఉంది. మా టీమ్ మిమ్మల్ని సంప్రదించడానికి WhatsApp మెసేజ్‌ను పూర్తి చేయండి.",
-  "mentor.thank.videoTitle": "ధన్యవాదాల వీడియో",
-  "mentor.thank.videoNote": "క్లయింట్ YouTube వీడియో ప్లే కావాలంటే mentorship.html లో YouTube వీడియో ID జోడించండి.",
+  "mentor.thank.videoTitle": "ధన్యవాదాల రీల్",
+  "mentor.thank.videoNote": "ఎన్రోల్మెంట్ తర్వాత క్లయింట్ సందేశాన్ని చూడండి.",
   "mentor.thank.whatsapp": "WhatsApp లో పూర్తి చేయండి",
   "mentor.thank.home": "మెయిన్ సైట్‌కు వెళ్లండి"
 });
