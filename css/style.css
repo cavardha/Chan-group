@@ -3696,3 +3696,14 @@ body.lang-te .gallery-filter {
 .thank-video-box iframe {
   background: #fff;
 }
+
+
+/* ENROLL BUTTON TARGET FIX */
+#enroll {
+  scroll-margin-top: 130px;
+}
+@media(max-width: 640px) {
+  #enroll {
+    scroll-margin-top: 120px;
+  }
+}

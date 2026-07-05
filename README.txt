@@ -214,3 +214,9 @@ INSTAGRAM REEL THANK-YOU UPDATE
   https://www.instagram.com/reel/DaSw2_byFE_/embed
 - Facebook display name updated to:
   Chan Rama Groups
+
+
+ENROLL BUTTON FIX
+=================
+- Fixed mentorship hero Enroll Now button.
+- Added id="enroll" to the enrollment form card so href="#enroll" scrolls correctly.
